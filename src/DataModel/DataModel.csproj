@@ -47,6 +47,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Job.cs" />
+    <Compile Include="Migrations\201804191459104_InitialState.cs" />
+    <Compile Include="Migrations\201804191459104_InitialState.Designer.cs">
+      <DependentUpon>201804191459104_InitialState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804191503248_AddingJobs.cs" />
+    <Compile Include="Migrations\201804191503248_AddingJobs.Designer.cs">
+      <DependentUpon>201804191503248_AddingJobs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SchedulingDbContext.cs" />
     <Compile Include="Entities\Template.cs" />
@@ -60,6 +69,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201804191459104_InitialState.resx">
+      <DependentUpon>201804191459104_InitialState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804191503248_AddingJobs.resx">
+      <DependentUpon>201804191503248_AddingJobs.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
