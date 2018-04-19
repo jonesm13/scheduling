@@ -9,6 +9,8 @@
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
         public JobState State { get; set; }
+
+        public virtual Station Station { get; set; }
     }
 
     public enum JobState
