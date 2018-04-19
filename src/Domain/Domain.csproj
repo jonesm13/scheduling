@@ -58,11 +58,16 @@
   <ItemGroup>
     <Compile Include="Features\Template\Create.cs" />
     <Compile Include="Features\Template\Controller.cs" />
+    <Compile Include="Features\Template\Index.cs" />
     <Compile Include="Pipeline\CommandResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\Job\" />
+    <Folder Include="Features\Station\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,6 +5,7 @@
         Audio,
         Command,
         AdBreak,
-        Comment
+        Comment,
+        Filler
     }
 }
