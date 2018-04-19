@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Job.cs" />
+    <Compile Include="Entities\Rule.cs" />
     <Compile Include="Migrations\201804191459104_InitialState.cs" />
     <Compile Include="Migrations\201804191459104_InitialState.Designer.cs">
       <DependentUpon>201804191459104_InitialState.cs</DependentUpon>
