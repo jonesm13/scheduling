@@ -5,14 +5,12 @@
     public class Rule : IEntity
     {
         public Guid Id { get; set; }
+        public Guid RuleSetId { get; set; }
         public string Name { get; set; }
-        public RuleType Type { get; set; }
+        public bool IsAddition { get; set; }
+        public string ClrType { get; set; }
         public string State { get; set; }
-    }
 
-    public enum RuleType
-    {
-        Addition,
-        Subtraction
+        public virtual RuleSet RuleSet { get; set; }
     }
 }
