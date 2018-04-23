@@ -6,6 +6,8 @@
         Command,
         AdBreak,
         Comment,
-        Filler
+        Filler,
+        PushRuleSet,
+        PopRuleSet
     }
 }

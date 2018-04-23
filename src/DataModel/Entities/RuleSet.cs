@@ -1,7 +1,6 @@
 ﻿namespace DataModel.Entities
 {
     using System;
-    using System.Collections;
     using System.Collections.Generic;
 
     public class RuleSet : IEntity

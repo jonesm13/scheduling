@@ -7,7 +7,6 @@
         public Guid Id { get; set; }
         public Guid RuleSetId { get; set; }
         public string Name { get; set; }
-        public bool IsAddition { get; set; }
         public string ClrType { get; set; }
         public string State { get; set; }
 

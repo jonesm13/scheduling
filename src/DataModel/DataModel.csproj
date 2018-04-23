@@ -62,6 +62,14 @@
     <Compile Include="Migrations\201804191504082_AddingJobs1.Designer.cs">
       <DependentUpon>201804191504082_AddingJobs1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804230942206_AddingRuleSetRelationships.cs" />
+    <Compile Include="Migrations\201804230942206_AddingRuleSetRelationships.Designer.cs">
+      <DependentUpon>201804230942206_AddingRuleSetRelationships.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231158581_RemovingRuleSetField.cs" />
+    <Compile Include="Migrations\201804231158581_RemovingRuleSetField.Designer.cs">
+      <DependentUpon>201804231158581_RemovingRuleSetField.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SchedulingDbContext.cs" />
     <Compile Include="Entities\Template.cs" />
@@ -85,6 +93,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804191504082_AddingJobs1.resx">
       <DependentUpon>201804191504082_AddingJobs1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804230942206_AddingRuleSetRelationships.resx">
+      <DependentUpon>201804230942206_AddingRuleSetRelationships.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231158581_RemovingRuleSetField.resx">
+      <DependentUpon>201804231158581_RemovingRuleSetField.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
