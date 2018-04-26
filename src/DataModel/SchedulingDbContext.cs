@@ -32,5 +32,7 @@
         public DbSet<Schedule> Schedule { get; set; }
 
         public DbSet<Job> Jobs { get; set; }
+
+        public DbSet<LogItem> LogItems { get; set; }
     }
 }

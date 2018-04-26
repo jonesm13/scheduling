@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Job.cs" />
+    <Compile Include="Entities\LogItem.cs" />
     <Compile Include="Entities\Rule.cs" />
     <Compile Include="Entities\RuleSet.cs" />
     <Compile Include="Migrations\201804191459104_InitialState.cs" />
@@ -69,6 +70,10 @@
     <Compile Include="Migrations\201804231158581_RemovingRuleSetField.cs" />
     <Compile Include="Migrations\201804231158581_RemovingRuleSetField.Designer.cs">
       <DependentUpon>201804231158581_RemovingRuleSetField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804261157072_AddingLogItemsModel.cs" />
+    <Compile Include="Migrations\201804261157072_AddingLogItemsModel.Designer.cs">
+      <DependentUpon>201804261157072_AddingLogItemsModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SchedulingDbContext.cs" />
@@ -99,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804231158581_RemovingRuleSetField.resx">
       <DependentUpon>201804231158581_RemovingRuleSetField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804261157072_AddingLogItemsModel.resx">
+      <DependentUpon>201804261157072_AddingLogItemsModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
