@@ -44,13 +44,6 @@
             }
         }
 
-        public class StationExists : EntityExists<Command, Station>
-        {
-            public StationExists(SchedulingDbContext db) : base(x => x.StationId, db)
-            {
-            }
-        }
-
         public class Handler : AsyncRequestHandler<Command, CommandResult>
         {
             readonly SchedulingDbContext db;
