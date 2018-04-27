@@ -2,22 +2,12 @@
 {
     using System.Threading.Tasks;
     using System.Web.Http;
-    using MediatR;
+    using ApiController = Infrastructure.WebApi.ApiController;
 
     [RoutePrefix("jobs")]
     public class JobController : ApiController
     {
-        readonly IMediator mediator;
-
-        public JobController(IMediator mediator)
-        {
-            this.mediator = mediator;
-        }
-
         [HttpGet, Route("")]
-        public async Task<IHttpActionResult> Index()
-        {
-            await mediator.Send(new Index.Query());
-        }
+        public async Task<IHttpActionResult> Index(Index.Query query) => await Ok(Mediator.Send(query ?? new Index.Query()));
     }
 }
