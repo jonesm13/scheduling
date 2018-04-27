@@ -12,17 +12,4 @@
 
         public virtual Template Template { get; set; }
     }
-
-    public enum TemplateItemTiming
-    {
-        Follow,
-        Absolute,
-        After
-    }
-
-    public enum TemplateItemFlags
-    {
-        AllowFade,
-        AllowDrop
-    }
 }

@@ -1,5 +1,6 @@
 ﻿namespace Domain.Features.Job
 {
+    using System;
     using System.Collections.Generic;
     using MediatR;
 
@@ -11,6 +12,7 @@
 
         public class Model
         {
+            public Guid Id { get; set; }
         }
     }
 }

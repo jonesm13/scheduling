@@ -51,6 +51,8 @@
     <Compile Include="Entities\LogItem.cs" />
     <Compile Include="Entities\Rule.cs" />
     <Compile Include="Entities\RuleSet.cs" />
+    <Compile Include="Entities\TemplateItemFlags.cs" />
+    <Compile Include="Entities\TemplateItemTiming.cs" />
     <Compile Include="Migrations\201804191459104_InitialState.cs" />
     <Compile Include="Migrations\201804191459104_InitialState.Designer.cs">
       <DependentUpon>201804191459104_InitialState.cs</DependentUpon>

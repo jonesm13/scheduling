@@ -66,6 +66,7 @@
     <Compile Include="Features\Job\Controller.cs" />
     <Compile Include="Features\Job\Create.cs" />
     <Compile Include="Features\Job\Index.cs" />
+    <Compile Include="Features\Station\Create.cs" />
     <Compile Include="Features\Station\Index.cs" />
     <Compile Include="Features\Station\Controller.cs" />
     <Compile Include="Features\Template\Create.cs" />
