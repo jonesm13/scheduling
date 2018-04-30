@@ -72,10 +72,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aspects\Validation\EntityExists.cs" />
     <Compile Include="Features\Job\Controller.cs" />
     <Compile Include="Features\Job\Create.cs" />
     <Compile Include="Features\Job\Index.cs" />
     <Compile Include="Features\Station\Create.cs" />
+    <Compile Include="Features\Station\Delete.cs" />
     <Compile Include="Features\Station\Index.cs" />
     <Compile Include="Features\Station\Controller.cs" />
     <Compile Include="Features\Template\Create.cs" />
@@ -91,7 +93,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Aspects\Validation\" />
     <Folder Include="Features\RuleSet\" />
   </ItemGroup>
   <ItemGroup>
