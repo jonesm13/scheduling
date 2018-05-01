@@ -23,7 +23,7 @@
             public Validator(SchedulingDbContext db)
             {
                 RuleFor(x => x.StationId)
-                    .EntityMustExist<Command, Guid, Station>(command => command.StationId, db);
+                    .EntityMustExist<Command, Guid, Station>(db);
             }
         }
 

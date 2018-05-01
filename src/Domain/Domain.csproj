@@ -79,12 +79,14 @@
     <Compile Include="Features\Job\Controller.cs" />
     <Compile Include="Features\Job\Create.cs" />
     <Compile Include="Features\Job\Index.cs" />
+    <Compile Include="Features\Schedule\Create.cs" />
     <Compile Include="Features\Station\Create.cs" />
     <Compile Include="Features\Station\Delete.cs" />
     <Compile Include="Features\Station\Index.cs" />
     <Compile Include="Features\Station\Controller.cs" />
     <Compile Include="Features\Template\Create.cs" />
     <Compile Include="Features\Template\Controller.cs" />
+    <Compile Include="Features\Template\Delete.cs" />
     <Compile Include="Features\Template\Index.cs" />
     <Compile Include="Features\Template\Item\Add.cs" />
     <Compile Include="Features\Template\Item\Controller.cs" />
@@ -98,6 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\RuleSet\" />
+    <Folder Include="Features\ScheduleException\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataModel\DataModel.csproj">

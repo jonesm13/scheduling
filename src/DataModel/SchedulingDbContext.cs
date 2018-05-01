@@ -35,13 +35,10 @@
         }
 
         public DbSet<Station> Stations { get; set; }
-
         public DbSet<Template> Templates { get; set; }
-
         public DbSet<Schedule> Schedule { get; set; }
-
+        public DbSet<ScheduleOverride> ScheduleOverride { get; set; }
         public DbSet<Job> Jobs { get; set; }
-
         public DbSet<LogItem> LogItems { get; set; }
     }
 }

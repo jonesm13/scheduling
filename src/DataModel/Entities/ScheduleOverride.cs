@@ -2,12 +2,12 @@
 {
     using System;
 
-    public class Schedule : IEntity
+    public class ScheduleOverride : IEntity
     {
         public Guid Id { get; set; }
         public Guid StationId { get; set; }
         public Guid TemplateId { get; set; }
-        public DayOfTheWeek Days { get; set; }
+        public DateTime Date { get; set; }
         public int Start { get; set; }
 
         public virtual Station Station { get; set; }
