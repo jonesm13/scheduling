@@ -2,7 +2,8 @@
 {
     public enum TemplateItemType
     {
-        Audio,
+        AudioSelection,
+        AudioItem,
         Command,
         AdBreak,
         Comment,
