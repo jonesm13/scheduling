@@ -24,6 +24,9 @@
             {
                 RuleFor(x => x.StationId)
                     .EntityMustExist<Command, Guid, Station>(db);
+
+                RuleFor(x => x.Start)
+                    .Must((command, time) => time < command.End);
             }
         }
 
