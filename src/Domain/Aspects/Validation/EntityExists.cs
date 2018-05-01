@@ -8,21 +8,23 @@
     using DataModel.Entities;
     using FluentValidation;
 
-    public abstract class EntityExists<T, TEntity> : AbstractValidator<T>
-        where TEntity : class, IEntity
-    {
-        protected EntityExists(
-            Expression<Func<T, Guid>> selector,
-            DbContext db)
-        {
-            RuleFor(selector)
-                .Must(guid => db.Set<TEntity>().Any(y => y.Id == guid))
-                .WithHttpStatusCode(HttpStatusCode.NotFound);
-        }
-    }
-
     public static class RuleBuilderExtensions
     {
+        public static IRuleBuilder<T, TProperty> EntityMustExist<T, TProperty, TEntity>(
+            this IRuleBuilderInitial<T, TProperty> ruleBuilder,
+            Expression<Func<T, Guid>> selector,
+            DbContext db)
+            where TEntity : class, IEntity
+        {
+            return ruleBuilder
+                .Must((message, property) =>
+                {
+                    Guid id = selector.Compile().Invoke(message);
+                    return db.Set<TEntity>().Any(x => x.Id == id);
+                })
+                .WithHttpStatusCode(HttpStatusCode.NotFound);
+        }
+
         public static IRuleBuilderOptions<T, TProperty> WithHttpStatusCode<T, TProperty>(
             this IRuleBuilderOptions<T, TProperty> ruleBuilder,
             HttpStatusCode code)

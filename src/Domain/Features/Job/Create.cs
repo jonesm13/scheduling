@@ -2,6 +2,7 @@
 {
     using System;
     using System.Threading.Tasks;
+    using Aspects.Validation;
     using DataModel;
     using DataModel.Entities;
     using FluentValidation;
@@ -19,10 +20,10 @@
 
         public class Validation : AbstractValidator<Command>
         {
-            public Validation()
+            public Validation(SchedulingDbContext db)
             {
-                RuleFor(x => x.End)
-                    .GreaterThan(x => x.Start);
+                RuleFor(x => x.StationId)
+                    .EntityMustExist<Command, Guid, Station>(command => command.StationId, db);
             }
         }
 

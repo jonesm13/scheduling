@@ -6,6 +6,7 @@
     using Aspects.Validation;
     using DataModel;
     using DataModel.Entities;
+    using FluentValidation;
     using Infrastructure.EntityFramework;
     using MediatR;
     using Pipeline;
@@ -17,11 +18,12 @@
             public Guid StationId { get; set; }
         }
 
-        public class Validator : EntityExists<Command, Station>
+        public class Validator : AbstractValidator<Command>
         {
             public Validator(SchedulingDbContext db)
-                : base(x => x.StationId, db)
             {
+                RuleFor(x => x.StationId)
+                    .EntityMustExist<Command, Guid, Station>(command => command.StationId, db);
             }
         }
 

@@ -8,6 +8,15 @@
 
     public class SchedulingDbContext : DbContext
     {
+        public SchedulingDbContext() : base("name=scheduling-db")
+        {
+        }
+
+        public static SchedulingDbContext Create()
+        {
+            return new SchedulingDbContext();
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
