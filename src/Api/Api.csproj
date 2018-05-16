@@ -163,9 +163,9 @@
       <Project>{aac7f515-a1c7-4e44-826e-580584302d1d}</Project>
       <Name>Infrastructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Scheduler\Scheduler.csproj">
+    <ProjectReference Include="..\Scheduler\Scheduling.csproj">
       <Project>{72A21058-2CD5-4BEC-BF4E-798206AAC2D0}</Project>
-      <Name>Scheduler</Name>
+      <Name>Scheduling</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -1,6 +1,7 @@
-﻿namespace Scheduler
+﻿namespace Scheduling
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
     using DataModel;
@@ -26,6 +27,16 @@
             {
                 return Task.CompletedTask;
             }
+
+            IEnumerable<Schedule> schedule = db.Schedule
+                .AsNoTracking()
+                .Where(x => x.StationId == theJob.StationId)
+                .ToList();
+
+            IEnumerable<ScheduleOverride> overrides = db.ScheduleOverride
+                .AsNoTracking()
+                .Where(x => x.StationId == theJob.StationId)
+                .ToList();
 
             return Task.CompletedTask;
         }

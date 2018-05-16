@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{4EAD343D-C6A8-41B3-A16D-7C833EF8907B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheduler", "Scheduler\Scheduler.csproj", "{72A21058-2CD5-4BEC-BF4E-798206AAC2D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheduling", "Scheduler\Scheduling.csproj", "{72A21058-2CD5-4BEC-BF4E-798206AAC2D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

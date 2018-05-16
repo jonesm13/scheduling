@@ -4,7 +4,7 @@
     using Domain.Features.Job;
     using Hangfire;
     using MediatR;
-    using Scheduler;
+    using Scheduling;
 
     public class JobCreatedHandler : AsyncNotificationHandler<Create.JobCreated>
     {
