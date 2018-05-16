@@ -9,7 +9,8 @@ namespace Api
         public void Configuration(IAppBuilder app)
         {
             app.UseLog4Net()
-                .UseWebApi();
+                .UseWebApi()
+                .UseHangfire();
         }
     }
 }

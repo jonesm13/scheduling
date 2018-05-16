@@ -13,6 +13,7 @@
     using System.Web.Http.Results;
     using FluentValidation;
     using FluentValidation.Results;
+    using Hangfire;
     using IoC;
     using log4net.Config;
     using MediatR;
@@ -41,6 +42,18 @@
             {
                 yield return Assembly.GetExecutingAssembly();
             }
+        }
+
+        public static IAppBuilder UseHangfire(this IAppBuilder app)
+        {
+            Hangfire.GlobalConfiguration
+                .Configuration
+                .UseSqlServerStorage("scheduling-db");
+
+            app.UseHangfireDashboard();
+            app.UseHangfireServer();
+
+            return app;
         }
 
         public static IAppBuilder UseLog4Net(this IAppBuilder app)

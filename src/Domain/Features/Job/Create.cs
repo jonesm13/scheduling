@@ -6,6 +6,7 @@
     using DataModel;
     using DataModel.Entities;
     using FluentValidation;
+    using Helpers;
     using MediatR;
     using Pipeline;
 
@@ -41,17 +42,24 @@
 
             protected override Task<CommandResult> HandleCore(Command request)
             {
+                Guid jobId = SequentualGuid.New();
+
                 db.Jobs.Add(new Job
                 {
-                    Id = Guid.NewGuid(),
+                    Id = jobId,
                     StationId = request.StationId,
                     Start = request.Start,
                     End = request.End,
                     State = JobState.None
                 });
 
-                return Task.FromResult(CommandResult.Void);
+                return Task.FromResult(CommandResult.Void.WithNotification(new JobCreated { JobId = jobId}));
             }
+        }
+
+        public class JobCreated : INotification
+        {
+            public Guid JobId { get; set; }
         }
     }
 }

@@ -1,9 +1,9 @@
 ﻿namespace Domain.Features.Template
 {
-    using System;
     using System.Threading.Tasks;
     using DataModel;
     using DataModel.Entities;
+    using Helpers;
     using Infrastructure.EntityFramework;
     using MediatR;
     using Pipeline;
@@ -25,7 +25,7 @@
             {
                 Db.Templates.Add(new Template
                 {
-                    Id = Guid.NewGuid(),
+                    Id = SequentualGuid.New(),
                     Name = request.Name
                 });
 

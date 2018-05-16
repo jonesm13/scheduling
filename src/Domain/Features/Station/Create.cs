@@ -1,9 +1,9 @@
 ﻿namespace Domain.Features.Station
 {
-    using System;
     using System.Threading.Tasks;
     using DataModel;
     using DataModel.Entities;
+    using Helpers;
     using Infrastructure.EntityFramework;
     using MediatR;
     using Pipeline;
@@ -25,7 +25,7 @@
             {
                 Db.Stations.Add(new Station
                 {
-                    Id = Guid.NewGuid(),
+                    Id = SequentualGuid.New(),
                     Name = request.Name
                 });
 
