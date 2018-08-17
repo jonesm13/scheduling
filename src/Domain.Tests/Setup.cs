@@ -2,6 +2,7 @@
 {
     using System.Data.Entity;
     using DataModel;
+    using DataModel.Migrations;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
@@ -10,7 +11,7 @@
         [AssemblyInitialize]
         public static void SetupTestRun(TestContext testContext)
         {
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<SchedulingDbContext>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<SchedulingDbContext, Configuration>());
 
             using (SchedulingDbContext db = SchedulingDbContext.Create())
             {

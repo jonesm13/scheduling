@@ -2,7 +2,7 @@ namespace DataModel.Migrations
 {
     using System.Data.Entity.Migrations;
 
-    sealed class Configuration : DbMigrationsConfiguration<DataModel.SchedulingDbContext>
+    public sealed class Configuration : DbMigrationsConfiguration<SchedulingDbContext>
     {
         public Configuration()
         {

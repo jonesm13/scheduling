@@ -79,6 +79,10 @@
     <Compile Include="Migrations\201804261157072_AddingLogItemsModel.Designer.cs">
       <DependentUpon>201804261157072_AddingLogItemsModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808171018421_AddingScheduleOverride.cs" />
+    <Compile Include="Migrations\201808171018421_AddingScheduleOverride.Designer.cs">
+      <DependentUpon>201808171018421_AddingScheduleOverride.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SchedulingDbContext.cs" />
     <Compile Include="Entities\Template.cs" />
@@ -111,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804261157072_AddingLogItemsModel.resx">
       <DependentUpon>201804261157072_AddingLogItemsModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808171018421_AddingScheduleOverride.resx">
+      <DependentUpon>201808171018421_AddingScheduleOverride.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

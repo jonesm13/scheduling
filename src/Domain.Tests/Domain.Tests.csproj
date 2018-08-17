@@ -80,7 +80,7 @@
     <Compile Include="DiContainerFactory.cs" />
     <Compile Include="IntegrationTestBase.cs" />
     <Compile Include="Setup.cs" />
-    <Compile Include="CanCreateATemplate.cs" />
+    <Compile Include="Integration\CanCreateATemplate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
