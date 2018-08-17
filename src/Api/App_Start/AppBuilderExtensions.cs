@@ -89,7 +89,7 @@
                                 IncludeGenericTypeDefinitions = true
                             });
 
-                    c.RegisterCollection(
+                    c.Collection.Register(
                         typeof(INotificationHandler<>),
                         notificationHandlers);
                 });

@@ -7,6 +7,7 @@
     using DataModel.Entities;
     using FluentValidation;
     using Helpers;
+    using Infrastructure.EntityFramework;
     using MediatR;
     using Pipeline;
 
@@ -31,20 +32,17 @@
             }
         }
 
-        public class Handler : AsyncRequestHandler<Command, CommandResult>
+        public class Handler : CommandHandler<Command, CommandResult, SchedulingDbContext>
         {
-            readonly SchedulingDbContext db;
-
-            public Handler(SchedulingDbContext db)
+            public Handler(SchedulingDbContext db) : base(db)
             {
-                this.db = db;
             }
 
-            protected override Task<CommandResult> HandleCore(Command request)
+            protected override Task<CommandResult> HandleImpl(Command request)
             {
                 Guid jobId = SequentualGuid.New();
 
-                db.Jobs.Add(new Job
+                Db.Jobs.Add(new Job
                 {
                     Id = jobId,
                     StationId = request.StationId,
@@ -53,7 +51,7 @@
                     State = JobState.None
                 });
 
-                return Task.FromResult(CommandResult.Void.WithNotification(new JobCreated { JobId = jobId}));
+                return Task.FromResult(CommandResult.Void.WithNotification(new JobCreated { JobId = jobId }));
             }
         }
 

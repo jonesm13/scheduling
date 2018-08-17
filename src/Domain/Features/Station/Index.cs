@@ -22,7 +22,7 @@
             {
             }
 
-            protected override async Task<IEnumerable<Model>> HandleCore(Query request)
+            protected override async Task<IEnumerable<Model>> HandleImpl(Query request)
             {
                 return await SetAsNoTracking<Station>()
                     .Select(x => new Model

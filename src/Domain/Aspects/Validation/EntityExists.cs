@@ -20,7 +20,7 @@
                     Guid? value = property as Guid?;
                     if (!value.HasValue)
                     {
-                        throw new Exception("");
+                        throw new Exception(""); // TODO
                     }
 
                     return db.Set<TEntity>().Any(x => x.Id == value.Value);

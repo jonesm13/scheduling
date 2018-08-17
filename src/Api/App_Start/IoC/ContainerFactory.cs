@@ -27,23 +27,21 @@
             // MediatR
             result.RegisterSingleton<IMediator, Mediator>();
 
+            result.Register(() => new ServiceFactory(result.GetInstance), Lifestyle.Singleton);
+
             // handlers
             result.Register(typeof(IRequestHandler<,>), assemblies);
             result.Register(typeof(INotificationHandler<>), assemblies);
 
-            result.RegisterCollection(typeof(IRequestPreProcessor<>), assemblies);
+            result.Collection.Register(typeof(IRequestPreProcessor<>), assemblies);
 
             // pipelines
-            result.RegisterCollection(typeof(IPipelineBehavior<,>), assemblies);
+            result.Collection.Register(typeof(IPipelineBehavior<,>), assemblies);
 
             // processors
             result.RegisterDecorator(typeof(IRequestHandler<,>), typeof(HandlerDecorator<,>));
 
-            result.RegisterCollection(typeof(IValidator<>), assemblies);
-
-            // factories
-            result.RegisterInstance(new SingleInstanceFactory(result.GetInstance));
-            result.RegisterInstance(new MultiInstanceFactory(result.GetAllInstances));
+            result.Collection.Register(typeof(IValidator<>), assemblies);
 
             customConfig?.Invoke(result);
 
