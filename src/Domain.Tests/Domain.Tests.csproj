@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="DiContainerFactory.cs" />
     <Compile Include="IntegrationTestBase.cs" />
+    <Compile Include="Integration\CanCreateAStation.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Integration\CanCreateATemplate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
