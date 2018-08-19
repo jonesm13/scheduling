@@ -94,6 +94,7 @@
     <Compile Include="Features\Template\Index.cs" />
     <Compile Include="Features\Template\Item\Add.cs" />
     <Compile Include="Features\Template\Item\Controller.cs" />
+    <Compile Include="Features\Template\Item\Delete.cs" />
     <Compile Include="Helpers\SequentialGuid.cs" />
     <Compile Include="IDomainLivesHere.cs" />
     <Compile Include="Pipeline\CommandResult.cs" />

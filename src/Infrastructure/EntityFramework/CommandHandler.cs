@@ -5,7 +5,8 @@
     using System.Threading.Tasks;
     using MediatR;
 
-    public abstract class CommandHandler<TRequest, TResponse, TDbContext> : IRequestHandler<TRequest, TResponse>
+    public abstract class CommandHandler<TRequest, TResponse, TDbContext>
+        : IRequestHandler<TRequest, TResponse>
         where TRequest : IRequest<TResponse>
         where TDbContext : DbContext
     {
@@ -15,9 +16,6 @@
         {
             Db = db;
         }
-
-        protected abstract Task<TResponse> HandleImpl(
-            TRequest request);
 
         public async Task<TResponse> Handle(
             TRequest request,
@@ -29,5 +27,8 @@
 
             return response;
         }
+
+        protected abstract Task<TResponse> HandleImpl(
+            TRequest request);
     }
 }
