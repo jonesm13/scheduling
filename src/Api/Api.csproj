@@ -132,12 +132,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\AppBuilderExtensions.cs" />
+    <Compile Include="App_Start\IAppBuilderExtensions.cs" />
+    <Compile Include="App_Start\CustomExceptionHandler.cs" />
+    <Compile Include="App_Start\ExceptionHandlerExtensions.cs" />
+    <Compile Include="App_Start\FailureResult.cs" />
     <Compile Include="App_Start\IoC\ContainerFactory.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ExceptionExtensions.cs" />
     <Compile Include="Notifications\JobCreatedHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
