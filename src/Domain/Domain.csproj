@@ -77,7 +77,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aspects\Validation\EntityExists.cs" />
+    <Compile Include="Aspects\Validation\RuleBuilderExtensions.cs" />
     <Compile Include="Features\Health\Controller.cs" />
     <Compile Include="Features\Health\Index.cs" />
     <Compile Include="Features\Job\Controller.cs" />
